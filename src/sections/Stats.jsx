@@ -26,10 +26,10 @@ const Counter = ({ value, duration = 2.5 }) => {
 };
 
 const stats = [
-  { label: 'High-Impact Projects', value: 24, suffix: '+' },
-  { label: 'Modern Technologies', value: 18, suffix: '' },
-  { label: 'Years of Mastery', value: 5, suffix: '+' },
-  { label: 'Satisfied Partners', value: 15, suffix: '+' },
+  { label: 'Full-Stack Projects', value: 4, suffix: '+' },
+  { label: 'Technologies & Tools', value: 18, suffix: '' },
+  { label: 'Internship Experiences', value: 3, suffix: '+' },
+  { label: 'Research-Backed Flagship System', value: 1, suffix: '' },
 ];
 
 export const Stats = () => {
@@ -46,7 +46,7 @@ export const Stats = () => {
           {stats.map((stat, i) => (
             <motion.div key={i} variants={fadeInUp}>
               <SpotlightCard className="p-12 md:p-14 group border border-border/40">
-                {/* Card Internal Glow (Secondary to Spotlight) */}
+                {/* Card Internal Glow */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.04)_0%,transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                 
                 <div className="relative z-10">
