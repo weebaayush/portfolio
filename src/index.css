@@ -58,11 +58,19 @@ body::before {
 }
 
 h1, h2, h3, h4 {
-  @apply tracking-[-0.04em] font-black;
+  @apply tracking-[-0.05em] font-black;
 }
 
 p {
-  @apply leading-[1.6] font-medium;
+  @apply leading-[1.7] font-medium;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-reveal {
+  @apply bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/20;
 }
 
 /* Custom Scrollbar */
