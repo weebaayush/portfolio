@@ -27,16 +27,16 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out',
-        isScrolled ? 'py-4' : 'py-10'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.21,0.47,0.32,0.98)]',
+        isScrolled ? 'py-4' : 'py-12'
       )}
     >
       <Container>
         <div
           className={cn(
-            'relative flex items-center justify-between px-8 py-3 rounded-full transition-all duration-700 border',
+            'relative flex items-center justify-between px-10 py-3.5 rounded-full transition-all duration-700 border',
             isScrolled 
-              ? 'bg-muted/10 backdrop-blur-2xl border-border/40 shadow-[0_20px_50px_rgba(0,0,0,0.5)]' 
+              ? 'glass shadow-[0_20px_50px_rgba(0,0,0,0.6)]' 
               : 'bg-transparent border-transparent'
           )}
         >
@@ -45,27 +45,27 @@ export const Navbar = () => {
             href="#hero"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-black tracking-[-0.06em] text-primary group"
+            className="text-2xl font-black tracking-[-0.08em] text-primary group"
           >
             AAYUSH<span className="text-accent group-hover:animate-pulse transition-all">.</span>
           </motion.a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-12">
+          <div className="hidden md:flex items-center gap-14">
             <ul className="flex items-center gap-10">
               {navLinks.map((link, i) => (
                 <motion.li
                   key={link.name}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1, duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  transition={{ delay: i * 0.05, duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
                 >
                   <a
                     href={link.href}
-                    className="text-[11px] uppercase tracking-[0.3em] font-black text-secondary hover:text-primary transition-all duration-500 relative group"
+                    className="text-[10px] uppercase tracking-[0.3em] font-black text-secondary hover:text-primary transition-all duration-500 relative group"
                   >
                     {link.name}
-                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent transition-all duration-500 group-hover:w-full rounded-full shadow-[0_0_10px_var(--color-accent)]" />
+                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent transition-all duration-500 group-hover:w-full rounded-full shadow-[0_0_15px_var(--color-accent)]" />
                   </a>
                 </motion.li>
               ))}
@@ -74,9 +74,9 @@ export const Navbar = () => {
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(59, 130, 246, 0.4)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(59, 130, 246, 0.5)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-primary text-background text-[10px] font-black uppercase tracking-[0.2em] px-7 py-2.5 rounded-full transition-all duration-500"
+              className="bg-primary text-background text-[10px] font-black uppercase tracking-[0.3em] px-8 py-2.5 rounded-full transition-all duration-500"
             >
               Contact
             </motion.button>
@@ -101,23 +101,23 @@ export const Navbar = () => {
             initial={{ opacity: 0, y: -20, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.98 }}
-            className="absolute top-full left-0 right-0 mt-4 px-6 md:hidden"
+            className="absolute top-full left-0 right-0 mt-6 px-6 md:hidden"
           >
-            <div className="bg-background/95 backdrop-blur-3xl border border-border/50 rounded-[2.5rem] p-10 shadow-2xl">
-              <ul className="flex flex-col gap-8">
+            <div className="glass rounded-[3rem] p-12 shadow-2xl">
+              <ul className="flex flex-col gap-10">
                 {navLinks.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-2xl font-black text-secondary hover:text-accent tracking-tight transition-colors block"
+                      className="text-3xl font-black text-secondary hover:text-accent tracking-tighter transition-colors block"
                     >
                       {link.name}
                     </a>
                   </li>
                 ))}
                 <li>
-                  <button className="w-full bg-primary text-background font-black uppercase tracking-widest py-5 rounded-2xl mt-4">
+                  <button className="w-full bg-primary text-background font-black uppercase tracking-widest py-6 rounded-[1.5rem] mt-4">
                     Get Started
                   </button>
                 </li>

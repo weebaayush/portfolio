@@ -58,11 +58,11 @@ body::before {
 }
 
 h1, h2, h3, h4 {
-  @apply tracking-[-0.05em] font-black;
+  @apply tracking-[-0.07em] font-black;
 }
 
 p {
-  @apply leading-[1.7] font-medium;
+  @apply leading-[1.7] font-medium text-secondary/80;
 }
 
 .text-balance {
@@ -70,33 +70,36 @@ p {
 }
 
 .text-reveal {
-  @apply bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/20;
+  @apply bg-clip-text text-transparent bg-gradient-to-b from-white via-white/90 to-white/30;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-background;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-muted border-2 border-background rounded-full hover:bg-border transition-colors;
+.section-padding {
+  @apply py-32 md:py-48 lg:py-56;
 }
 
 /* Premium Utilities */
 .glass {
-  @apply bg-muted/20 backdrop-blur-2xl border border-border/50;
+  @apply bg-card/40 backdrop-blur-3xl border border-border/40;
 }
 
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/30;
+.btn-primary {
+  @apply relative bg-primary text-background px-10 py-5 rounded-[1.25rem] font-black uppercase tracking-[0.2em] text-[10px] overflow-hidden transition-all hover:scale-[1.02] active:scale-95 shadow-[0_20px_40px_rgba(255,255,255,0.1)];
+}
+
+.btn-primary .btn-glow {
+  @apply absolute inset-0 bg-gradient-to-r from-accent/60 to-transparent opacity-0 transition-all duration-500;
+}
+
+.btn-primary:hover .btn-glow {
+  @apply opacity-100;
+}
+
+.btn-secondary {
+  @apply px-10 py-5 rounded-[1.25rem] font-black uppercase tracking-[0.2em] text-[10px] border border-border/60 bg-muted/5 hover:bg-muted/10 transition-all active:scale-95 text-secondary hover:text-primary backdrop-blur-xl;
 }
 
 .glow-card {
-  @apply relative overflow-hidden rounded-[2.5rem] border border-border/50 bg-card transition-all duration-700;
+  @apply relative overflow-hidden rounded-[3rem] border border-border/40 bg-card backdrop-blur-3xl transition-all duration-700;
 }
 
 .glow-card::before {
