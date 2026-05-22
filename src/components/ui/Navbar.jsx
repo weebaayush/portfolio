@@ -47,7 +47,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-black tracking-[-0.06em] text-primary group"
           >
-            AYUSH<span className="text-accent group-hover:animate-pulse transition-all">.</span>
+            AAYUSH<span className="text-accent group-hover:animate-pulse transition-all">.</span>
           </motion.a>
 
           {/* Desktop Nav */}
