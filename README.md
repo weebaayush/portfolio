@@ -1,16 +1,55 @@
-# React + Vite
+# AAYUSH.DEV — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio showcasing the work and engineering style of Aayush Gautam.
 
-Currently, two official plugins are available:
+**Short:** A modern, production-oriented portfolio built with React + Vite, using Tailwind CSS and Framer Motion for polished UI and interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**What's included:**
+- **Hero / About / Projects / Experience / Skills / Contact:** interactive sections highlighting identity, projects, and technical capabilities.
+- **Notable project:** ClubConnect — a college management platform (QR attendance, RBAC, scalable backend). Repository: https://github.com/weebaayush
 
-## React Compiler
+**Tech stack:** React, Vite, Tailwind CSS, Framer Motion, lucide-react, clsx, tailwind-merge.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Quick start**
 
-## Expanding the ESLint configuration
+1. Install dependencies:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+2. Run development server:
+
+```bash
+npm run dev
+```
+
+3. Build for production:
+
+```bash
+npm run build
+```
+
+4. Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+**Project structure (high level):**
+- `src/sections` — page sections (`Hero`, `About`, `Projects`, `Skills`, `Experience`, `Contact`, `Stats`)
+- `src/components` — UI building blocks and shared components
+- `src/utils` — animation helpers and utilities
+
+**Author & contact**
+
+- Name: Aayush Gautam (AAYUSH.DEV)
+- Location: Mumbai, India
+- Status: KC College • CS 2026 — Available for global roles
+
+**Deployment**
+
+This is a static single-page app. Build with `npm run build` and deploy the contents of the `dist/` directory to Netlify, Vercel, GitHub Pages, or any static host.
+
+**Notes**
+- This repository is a personal portfolio — pull requests are not expected. For inquiries or collaborations, use the contact section on the site or open an issue on the linked GitHub account.
